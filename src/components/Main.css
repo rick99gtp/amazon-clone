@@ -1,8 +1,16 @@
 .main {
-    
+    background-color: var(--main-bg);
 }
 
 .main__image {
     width: 100%;
-    mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1.0),rgb(0, 0, 0, 0.0));
+    mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1.0) 70%,rgb(0, 0, 0, .1) 85%, rgb(0, 0, 0, 0.0));
+    z-index: -1;
+    margin-bottom: -450px;
+}
+
+.main__row {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-evenly;
 }

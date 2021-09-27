@@ -2,6 +2,9 @@
     --orange: rgb(254, 189, 105);
     --dark-orange: rgb(255, 153, 0);
     --header-bg: rgb(19, 25, 33);
+    --main-bg: #eaeded;
+    --product-price: rgb(177, 39, 4);
+    --product-add-to-cart: rgb(255, 216, 20);
 }
 
 * {
