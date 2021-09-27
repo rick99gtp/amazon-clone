@@ -1,7 +1,7 @@
 .header {
     display: flex;
     align-items: center;
-    background-color: #131921;
+    background-color: var(--header-bg);
     padding: 5px 20px;
     position: sticky;
     top: 0;
@@ -58,7 +58,7 @@
     background-color: white;
     flex: 1;
     border-radius: 10px;
-    border: 3px solid transparent;
+    border: 3px solid var(--header-bg);
 }
 
 .header__search--input {
