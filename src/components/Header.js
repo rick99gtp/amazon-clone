@@ -37,9 +37,9 @@ function Header() {
                 </div>
 
                 <div className='header__option header__option--cart'>
-                    <BiCartAlt />
-                    <p className='header--text'>Cart</p>
-                    0
+                    <BiCartAlt style={{fontSize: '2rem'}}/>
+                    <p className='header--text header--textbig header_option--cart-text'>Cart</p>
+                    <p className='header--text header--shopping-cart-items header--textbig'>0</p>
                 </div>
 
             </div>

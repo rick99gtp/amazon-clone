@@ -97,4 +97,15 @@
 
 .header__option--cart {
     display: flex;
+    align-items: flex-end;
+}
+
+.header_option--cart-text {
+    margin-bottom: 4px;
+}
+
+.header--shopping-cart-items {
+    padding: 5px;
+    color: var(--dark-orange);
+    font-size: 1.15rem;
 }
