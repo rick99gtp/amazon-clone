@@ -1,0 +1,8 @@
+.main {
+    
+}
+
+.main__image {
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1.0),rgb(0, 0, 0, 0.0));
+}
