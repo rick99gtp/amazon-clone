@@ -1,0 +1,10 @@
+:root {
+    --orange: rgb(254, 189, 105);
+    --searchbar-border: rgb(255, 153, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
