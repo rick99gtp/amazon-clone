@@ -5,7 +5,7 @@
 
 .checkout__empty-cart {
     display: flex;
-    padding-top: 32px;
+    padding: 32px 0;
     background-color: white;
 }
 
