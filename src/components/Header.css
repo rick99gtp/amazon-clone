@@ -13,6 +13,7 @@
     height: 50px;
     border: 1px solid transparent;
     padding: 5px;
+    cursor: pointer;
 }
 
 .header__logo:hover {

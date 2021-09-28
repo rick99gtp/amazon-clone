@@ -17,7 +17,7 @@ function Product(props) {
                 </p>
             </div>
 
-            <img className='product__info--image' src='https://m.media-amazon.com/images/I/611DJR7V1sL._AC_SX466_.jpg' alt='' />
+            <img className='product__info--image' src={props.img} alt='' />
 
             <button>Add to cart</button>
         </div>
