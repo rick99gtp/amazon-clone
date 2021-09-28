@@ -2,12 +2,15 @@ import './Header.css';
 import { BsSearch } from 'react-icons/bs';
 import { TiLocationOutline } from 'react-icons/ti';
 import { BiCartAlt } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
-function Header() {
+const Header = () => {
 
     return (
         <div className='header'>
-            <img className='header__logo' src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' alt='amazon logo' />
+            <Link to='/'>
+                <img className='header__logo' src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' alt='amazon logo' />
+            </Link>
             <div className='header__deliveryaddress'>
                 <div className='header__deliveryaddress--location'>
                     <TiLocationOutline />
@@ -36,11 +39,13 @@ function Header() {
                     <p className='header--text header--textbig'>& Orders</p>
                 </div>
 
-                <div className='header__option header__option--cart'>
-                    <BiCartAlt style={{fontSize: '2rem'}}/>
-                    <p className='header--text header--textbig header_option--cart-text'>Cart</p>
-                    <p className='header--text header--shopping-cart-items header--textbig'>0</p>
-                </div>
+                <Link to='/checkout'>
+                    <div className='header__option header__option--cart'>
+                        <BiCartAlt style={{ fontSize: '2rem' }} />
+                        <p className='header--text header--textbig header_option--cart-text'>Cart</p>
+                        <p className='header--text header--shopping-cart-items header--textbig'>0</p>
+                    </div>
+                </Link>
 
             </div>
         </div>

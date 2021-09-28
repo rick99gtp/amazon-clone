@@ -1,7 +1,7 @@
 import './Product.css';
 import Star from './Star';
 
-function Product(props) {
+const Product = (props) => {
     return (
         <div className='product'>
             <div className='product__info'>

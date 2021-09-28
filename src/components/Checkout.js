@@ -1,0 +1,30 @@
+import './Checkout.css';
+import { Link } from 'react-router-dom';
+
+const Checkout = () => {
+    return (
+        <div className='checkout'>
+            <div className='checkout__empty-cart'>
+                <img src='https://m.media-amazon.com/images/G/01/cart/empty/kettle-desaturated._CB445243794_.svg' alt='empty cart' />
+                <div className='checkout__empty-cart--info'>
+                    <h1>Your Amazon Cart is empty</h1>
+                    <p href="#">Shop today's deals</p>
+                    <div className='checkout__empty-cart--buttons'>
+                        <Link to='/signin' style={{ textDecoration: 'none'}}>
+                            <div className='user__sign-in'>Sign in to your account</div>
+                        </Link>
+                        <Link to='/signup' style={{ textDecoration: 'none'}}>
+                            <div className='user__sign-up'>Sign up now</div>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            <div className='checkout__items'>
+
+            </div>
+        </div>
+    )
+}
+
+export default Checkout;
