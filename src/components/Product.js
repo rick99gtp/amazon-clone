@@ -11,9 +11,9 @@ const Product = (props) => {
             payload: {
               id: props.id,
               title: props.title,
-              image: props.image,
+              image: props.img,
               price: props.price,
-              rating: props.rating,
+              rating: props.stars,
             },
           });
     };

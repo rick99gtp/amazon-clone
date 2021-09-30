@@ -1,11 +1,5 @@
 const initialState = {
-    items: [{
-        id: '1',
-        title: 'test item',
-        price: '29.99',
-        image: 'test image',
-        stars: '5',
-    }]
+    items: []
 };
 
 const reducer = (state = initialState, action) => {
