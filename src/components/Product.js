@@ -1,21 +1,25 @@
 import './Product.css';
 import Star from './Star';
-import store from '../store';
+// import store from '../store';
+import { useDispatch } from 'react-redux';
+import { AiFillPropertySafety } from 'react-icons/ai';
 
 const Product = (props) => {
 
+    const dispatch = useDispatch();
+
     const addToCart = () => {
-        //dispatch to store
-        store.dispatch({
-            type: "ADD_TO_CART",
-            payload: {
-                id: props.id,
-                title: props.title,
-                image: props.img,
-                price: props.price,
-                rating: props.stars,
-            },
-        });
+        return (
+            {
+                payload: {
+                    id: props.id,
+                    title: props.title,
+                    image: props.img,
+                    price: props.price,
+                    rating: props.stars,
+                }
+            }
+        )
     };
 
     return (
@@ -36,7 +40,7 @@ const Product = (props) => {
             <img className='product__info--image' src={props.img} alt='' />
 
             <div className='product__button-div'>
-                <button onClick={addToCart}>Add to cart</button>
+                <button onClick={() => dispatch({ type: "ADD_TO_CART", payload: {id: props.id, title: props.title, image: props.img, price: props.price, rating: props.stars } })}>Add to cart</button>
             </div>
 
         </div>
