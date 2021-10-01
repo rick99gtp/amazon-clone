@@ -3,8 +3,12 @@ import { BsSearch } from 'react-icons/bs';
 import { TiLocationOutline } from 'react-icons/ti';
 import { BiCartAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+    const counter = useSelector(state => state.items.length);
+
+    // console.log(counter.items.length);
 
     return (
         <div className='header'>
@@ -43,7 +47,7 @@ const Header = () => {
                     <div className='header__option header__option--cart'>
                         <BiCartAlt style={{ fontSize: '2rem' }} />
                         <p className='header--text header--textbig header_option--cart-text'>Cart</p>
-                        <p className='header--text header--shopping-cart-items header--textbig'>0</p>
+                        <p className='header--text header--shopping-cart-items header--textbig'>{counter}</p>
                     </div>
                 </Link>
 

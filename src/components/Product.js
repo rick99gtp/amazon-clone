@@ -9,13 +9,13 @@ const Product = (props) => {
         store.dispatch({
             type: "ADD_TO_CART",
             payload: {
-              id: props.id,
-              title: props.title,
-              image: props.img,
-              price: props.price,
-              rating: props.stars,
+                id: props.id,
+                title: props.title,
+                image: props.img,
+                price: props.price,
+                rating: props.stars,
             },
-          });
+        });
     };
 
     return (
@@ -25,7 +25,7 @@ const Product = (props) => {
                     {props.title}
                 </p>
                 <div className='product__info--stars'>
-                    {Array(5).fill().map((_,i) => <Star key={i} starActive={props.stars >= i + 1 ? true : false}/>)}
+                    {Array(5).fill().map((_, i) => <Star key={i} starActive={props.stars >= i + 1 ? true : false} />)}
                 </div>
                 <p className='product__info--price-container'>
                     Price:
@@ -35,7 +35,10 @@ const Product = (props) => {
 
             <img className='product__info--image' src={props.img} alt='' />
 
-            <button onClick={addToCart}>Add to cart</button>
+            <div className='product__button-div'>
+                <button onClick={addToCart}>Add to cart</button>
+            </div>
+
         </div>
     )
 }

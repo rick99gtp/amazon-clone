@@ -28,6 +28,13 @@
     max-height: 200px;
 }
 
+.product__button-div {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
 button {
     border-radius: 50px;
     background-color: var(--button-yellow);
