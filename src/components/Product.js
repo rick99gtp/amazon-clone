@@ -8,20 +8,6 @@ const Product = (props) => {
 
     const dispatch = useDispatch();
 
-    const addToCart = () => {
-        return (
-            {
-                payload: {
-                    id: props.id,
-                    title: props.title,
-                    image: props.img,
-                    price: props.price,
-                    rating: props.stars,
-                }
-            }
-        )
-    };
-
     return (
         <div className='product'>
             <div className='product__info'>

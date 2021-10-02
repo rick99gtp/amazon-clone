@@ -3,30 +3,6 @@
     background-color: var(--main-bg);
 }
 
-.checkout__empty-cart {
-    display: flex;
-    padding: 32px 0;
-    background-color: white;
-}
-
-.checkout__empty-cart img {
-    width: 30%;
-    margin-right: 20px;
-}
-
-.checkout__empty-cart--info {
-    
-}
-
-.checkout__empty-cart--info h1 {
-    font-size: 24px;
-}
-
-.checkout__empty-cart--buttons {
-    display: flex;
-    margin: 16px 0;
-}
-
 .user__sign-in {
     background-color: var(--button-yellow);
     border-radius: 8px;
