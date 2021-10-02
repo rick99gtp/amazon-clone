@@ -12,15 +12,14 @@ const Checkout = () => {
     const count = cart.items.length;
 
     useEffect(() => {
-        if(count > 0) {
-            setCartHasItems(true);
-        }
+        // if cart is empty, sets to 0 which is falsy, everything else is true ( > 0 )
+        setCartHasItems(count);
     }, [count]);
 
     return (
         <div className='checkout'>
             {cartHasItems ? <CartItems /> : <EmptyCart />
-        }
+            }
         </div>
     )
 }
