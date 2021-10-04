@@ -16,11 +16,11 @@
 }
 
 .checkout__items--div {
-    flex: 8;
+    flex: 5;
 }
 
 .checkout__price--div {
-    flex: 2;
+    flex: 1;
 }
 
 .user__sign-in {

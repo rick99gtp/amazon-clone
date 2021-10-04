@@ -3,7 +3,7 @@
     flex: 1;
     padding: 20px;
     z-index: 1;
-    margin: 10px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
 }
