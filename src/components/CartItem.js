@@ -1,6 +1,7 @@
 import './CartItem.css';
 import Star from './Star';
 import { useDispatch } from 'react-redux';
+import Quantity from './Quantity';
 
 const CartItem = (props) => {
 
@@ -18,12 +19,13 @@ const CartItem = (props) => {
                         <div className='cartitem__info--stars'>
                             {Array(5).fill().map((_, i) => <Star key={i} starActive={props.stars >= i + 1 ? true : false} />)}
                         </div>
-                        <div className='cartitem__button-div'>
-                            <button onClick={() => dispatch({
+                        <div className='cartitem__actions'>
+                            <Quantity />
+                            <div className='cartitem__deleteitem' onClick={() => dispatch({
                                 type: "REMOVE_TO_CART", payload: {
                                     id: props.id
                                 }
-                            })}>Remove from cart</button>
+                            })}>Delete</div>
                         </div>
                     </div>
                     <div className='cartitem__price'>

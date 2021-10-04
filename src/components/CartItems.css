@@ -14,7 +14,6 @@
 }
 
 .checkout__pricetext {
-    border-bottom: 1px solid rgb(221,221,221);
     margin: 10px 10px 0 10px;
     display: flex;
     justify-content: flex-end;

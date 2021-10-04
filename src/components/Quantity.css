@@ -1,0 +1,18 @@
+.quantity {
+    border-radius: 7px;
+    padding: 5px 10px;
+    background-color: rgb(240, 242, 242);
+    border: 1px solid rgb(213, 217, 217);
+    font-size: 14px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 5px rgba(15, 17, 17, 0.15);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    margin-right: 5px;
+}
+
+.quantity:hover {
+    filter: brightness(90%);
+}
