@@ -1,7 +1,7 @@
 .cartitem__container {
     background-color: white;
     flex: 1;
-    padding: 10px 0 10px 0;
+    padding: 15px 0 10px 0;
     z-index: 1;
     display: flex;
     align-items: center;
