@@ -1,7 +1,7 @@
 .cartitem__container {
     background-color: white;
     flex: 1;
-    padding: 15px 0 10px 0;
+    padding: 15px 0 20px 0;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
     margin: 0 10px 0 30px;
     object-fit: contain;
     max-height: 150px;
-    min-width: 200px;
+    max-width: 200px;
 }
 
 .cartitem__info--right {

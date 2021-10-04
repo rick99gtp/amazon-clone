@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import CartItem from './CartItem';
 import './CartItems.css';
+import CartSubtotal from './CartSubtotal';
 
 const CartItems = () => {
     const cart = useSelector(state => state);
@@ -28,6 +29,7 @@ const CartItems = () => {
                 Price
             </div>
             {items}
+            <CartSubtotal />
         </div>
     )
 };

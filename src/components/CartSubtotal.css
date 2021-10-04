@@ -1,0 +1,9 @@
+.cartsubtotal {
+    border-top: 1px solid rgb(221,221,221);
+    padding: 5px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 18px;
+}
