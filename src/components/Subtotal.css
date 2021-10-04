@@ -1,0 +1,17 @@
+.subtotal__container {
+    background-color: white;
+    flex: 1;
+    padding: 20px;
+    z-index: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtotal__info {
+    display: flex;
+}
+
+.subtotal__proceed--button {
+    margin-top: 20px;
+}

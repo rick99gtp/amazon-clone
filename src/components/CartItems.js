@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
-import Product from './Product';
+import CartItem from './CartItem';
+import './CartItems.css';
 
 const CartItems = () => {
     const cart = useSelector(state => state);
@@ -7,7 +8,7 @@ const CartItems = () => {
     // map through store.items for all items in cart
     const items = cart.items.map(function (item) {
         return (
-            <Product
+            <CartItem
                 key={item.id}
                 id={item.id}
                 title={item.title}
@@ -20,6 +21,12 @@ const CartItems = () => {
 
     return (
         <div className='checkout__items'>
+            <div className='checkout__itemheader'>
+                <h1>Shopping Cart</h1>
+            </div>
+            <div className='checkout__pricetext'>
+                Price
+            </div>
             {items}
         </div>
     )

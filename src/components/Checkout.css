@@ -1,6 +1,26 @@
 .checkout {
     padding: 14px 18px 18px 18px;
     background-color: var(--main-bg);
+    display: flex;
+}
+
+.checkout__header--ad {
+    background-color: white;
+    flex: 1;
+    padding: 20px;
+    z-index: 1;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.checkout__items--div {
+    flex: 8;
+}
+
+.checkout__price--div {
+    flex: 2;
 }
 
 .user__sign-in {
