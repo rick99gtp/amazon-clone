@@ -14,4 +14,18 @@
 
 .subtotal__proceed--button {
     margin-top: 20px;
+    border-radius: 10px;
+    background-color: var(--button-yellow);
+    padding: 5px 30px;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.subtotal__proceed--button:hover {
+    filter: brightness(90%);
 }

@@ -1,7 +1,7 @@
 .cartitem__container {
     background-color: white;
     flex: 1;
-    padding: 10px ;
+    padding: 10px 0 10px 0;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -39,6 +39,7 @@
 .cartitem__info--price {
     font-size: 18px;
     font-family: sans-serif;
+    font-weight: bold;
 }
 
 .cartitem__actions {

@@ -7,7 +7,7 @@ const Subtotal = () => {
                 <div className='subtotal__itemcount'>Subtotal (0 items)</div>
                 <div className='subtotal__amount'>$0.00</div>
             </div>
-            <button className='subtotal__proceed--button'>Proceed to checkout</button>
+            <div className='subtotal__proceed--button'>Proceed to checkout</div>
         </div>
     )
 };
