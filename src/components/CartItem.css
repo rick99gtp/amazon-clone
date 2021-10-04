@@ -16,7 +16,7 @@
 .cartitem__info--image {
     margin: 0 10px 0 30px;
     object-fit: contain;
-    max-height: 150px;
+    max-height: 200px;
     max-width: 200px;
 }
 
