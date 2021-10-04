@@ -1,11 +1,12 @@
 .cartitem__container {
     background-color: white;
     flex: 1;
-    padding: 10px;
+    padding: 10px ;
     z-index: 1;
     display: flex;
     align-items: center;
     border-top: 1px solid rgb(221,221,221);
+    margin: 0 10px;
 }
 
 .cartitem__info {
@@ -16,6 +17,7 @@
     margin: 0 10px 0 30px;
     object-fit: contain;
     max-height: 150px;
+    min-width: 200px;
 }
 
 .cartitem__info--right {
@@ -25,6 +27,7 @@
 .cartitem__info--title {
     font-size: 18px;
     font-family: sans-serif;
+    padding-right: 100px;
 }
 
 .cartitem__info--stars {
