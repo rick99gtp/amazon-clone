@@ -22,9 +22,7 @@ const CartItem = (props) => {
                         <div className='cartitem__actions'>
                             <Quantity />
                             <div className='cartitem__deleteitem' onClick={() => dispatch({
-                                type: "REMOVE_TO_CART", payload: {
-                                    id: props.id
-                                }
+                                type: "REMOVE_FROM_CART", id: props.id
                             })}>Delete</div>
                         </div>
                     </div>
