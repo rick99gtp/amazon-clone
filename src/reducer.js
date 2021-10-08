@@ -2,6 +2,9 @@ const initialState = {
     items: []
 };
 
+export const getCartTotal = cart =>
+    cart.items?.reduce((amount, item) => item.price + amount, 0);
+
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_TO_CART":
@@ -19,7 +22,7 @@ const reducer = (state = initialState, action) => {
                 newItems.splice(index, 1);
             }
             else {
-                console.warn('Cant remove product (id: ${action.id}) as its not in the cart!')
+                console.warn(`Cant remove product (id: ${action.id}) as its not in the cart!`)
             }
 
             return {

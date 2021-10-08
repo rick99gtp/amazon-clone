@@ -2,12 +2,13 @@ import { useSelector } from 'react-redux';
 import CartItem from './CartItem';
 import './CartItems.css';
 import CartSubtotal from './CartSubtotal';
+import { getCartTotal } from '../reducer';
 
 const CartItems = () => {
     const cart = useSelector(state => state);
 
     // map through store.items for all items in cart
-    const items = cart.items.map(function (item) {
+    const items = cart.items.map(function (item, idx) {
         return (
             <CartItem
                 key={item.id}
@@ -29,7 +30,7 @@ const CartItems = () => {
                 Price
             </div>
             {items}
-            <CartSubtotal />
+            <CartSubtotal numitems={cart.items.length} subtotal={getCartTotal(cart)}/>
         </div>
     )
 };
