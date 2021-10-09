@@ -6,8 +6,8 @@ const CartSubtotal = (props) => {
 
     return (
         <div className='cartsubtotal'>
-            Subtotal ({props.numitems} item{props.numitems > 1 ? 's' : null}):
-            <CurrencyFormat value={props.subtotal} renderText={value => <div>{value}</div>} prefix={'$'} displayType={'text'} thousandSeparator={true} />;
+            <p className='cartsubtotal__numitems'>Subtotal ({props.numitems} item{props.numitems > 1 ? 's' : null}):</p>
+            <CurrencyFormat value={props.subtotal} renderText={value => <div>{value}</div>} prefix={'$'} displayType={'text'} thousandSeparator={true} />
         </div>
     )
 };

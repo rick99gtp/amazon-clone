@@ -7,3 +7,7 @@
     font-weight: bold;
     font-size: 18px;
 }
+
+.cartsubtotal__numitems {
+    margin-right: 5px;
+}

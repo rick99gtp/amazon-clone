@@ -29,3 +29,7 @@
 .subtotal__proceed--button:hover {
     filter: brightness(90%);
 }
+
+.subtotal__amount {
+    margin-left: 5px;
+}

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import EmptyCart from './EmptyCart';
 import CartItems from './CartItems';
 import Subtotal from './Subtotal';
+import { getCartTotal } from '../reducer';
 
 const Checkout = () => {
     const [cartHasItems, setCartHasItems] = useState(false);
@@ -26,7 +27,7 @@ const Checkout = () => {
                 {cartHasItems ? <CartItems /> : <EmptyCart />}
             </div>
             <div className='checkout__price--div'>
-                {cartHasItems ? <Subtotal /> : null}
+                {cartHasItems ? <Subtotal numitems={count} subtotal={getCartTotal(cart)}/> : null}
             </div>
         </div>
     )
