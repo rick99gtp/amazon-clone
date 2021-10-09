@@ -33,15 +33,17 @@ const Header = () => {
             </div>
 
             <div className='header__nav'>
-                <div className='header__option'>
-                    <p className='header--text'>Hello, Sign In</p>
-                    <p className='header--text header--textbig'>Account & Lists</p>
-                </div>
+                <Link to='/login'>
+                    <div className='header__option'>
+                        <p className='header--text'>Hello, Sign In</p>
+                        <p className='header--text header--textbig'>Account & Lists</p>
+                    </div>
+                </Link>
 
-                <div className='header__option'>
-                    <p className='header--text'>Returns</p>
-                    <p className='header--text header--textbig'>& Orders</p>
-                </div>
+                    <div className='header__option'>
+                        <p className='header--text'>Returns</p>
+                        <p className='header--text header--textbig'>& Orders</p>
+                    </div>
 
                 <Link to='/checkout'>
                     <div className='header__option header__option--cart'>
