@@ -1,21 +1,64 @@
 import './Login.css';
 import logo from '../assets/amazon-logo-white.jpg';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import '../firebase';
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const signin = e => {
+        e.preventDefault();
+
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then(userCredential => {
+                //signed in
+                const user = userCredential.user;
+                console.log(user);
+            })
+            .catch(error => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            })
+    };
+
+    const createAccount = e => {
+        e.preventDefault();
+
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+            });
+
+    };
+
     return (
         <div className='login'>
-            <img src={logo} alt="Amazon Logo" />
+            <Link to="/">
+                <img src={logo} alt="Amazon Logo" />
+            </Link>
             <div className='login-container'>
                 <form>
                     <h1>Sign-In</h1>
                     <p>Email</p>
-                    <input id='login-email' className='login-input' type='text' name='email' />
+                    <input id='login-email' className='login-input' type='text' name='email' value={email} onChange={e => setEmail(e.target.value)} />
                     <p>Password</p>
-                    <input id='login-password' className='login-input' type='text' />
-                    <div id='login-btn' className='login-button'>Sign In</div>
+                    <input id='login-password' className='login-input' type='text' value={password} onChange={e => setPassword(e.target.value)} />
+                    <button id='login-btn' className='login-button' onClick={signin}>Sign In</button>
                 </form>
-                <p>By signing-in, you agree with my Amazon Clone Conditions of Use and Privacy Notice</p>
-                <div className='login-button login-createaccount'>Create an Amazon Account</div>
+                <p>By signing-in, you agree with my Amazon Clone Conditions of Use and Privacy Notice.</p>
+                <button className='login-button login-createaccount' onClick={createAccount}>Create an Amazon Account</button>
             </div>
         </div>
     )

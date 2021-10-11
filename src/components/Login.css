@@ -7,7 +7,7 @@
     flex-direction: column;
     width: 350px;
     margin: 0 auto;
-    border: 1px solid #000;
+    border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px 26px;
     text-align: left;
@@ -17,6 +17,10 @@
     font-weight: normal;
     margin-bottom: 10px;
     font-size: 28px;
+}
+
+.login-container > p {
+    font-size: 13px;
 }
 
 .login-button {
@@ -49,6 +53,7 @@
 
 #login-btn {
     margin-bottom: 14px;
+    width: 100%;
 }
 
 .login-createaccount {
