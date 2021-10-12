@@ -7,11 +7,10 @@ import Checkout from './components/Checkout';
 import { useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import './firebase';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 function App() {
 
-  const user = useSelector(state => state.user);
   const dispatch = useDispatch();
 
   useEffect(() => {

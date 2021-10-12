@@ -1,13 +1,12 @@
 import './Header.css';
 import { BsSearch } from 'react-icons/bs';
-import { TiLocationOutline, TiArrowSortedDown } from 'react-icons/ti';
+import { TiLocationOutline } from 'react-icons/ti';
 import { BiCartAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Header = () => {
-    const counter = useSelector(state => state.items.length);
-    const user = useSelector(state => state.user);
+    const state = useSelector(state => state);
 
     return (
         <div className='header'>
@@ -33,9 +32,9 @@ const Header = () => {
 
             <div className='header__nav'>
                 <Link to='/login'>
-                    <div className='header__option'>
-                        <p className='header--text'>Hello, {user ? user.email : null}</p>
-                        <p className='header--text header--textbig'>Account & Lists <TiArrowSortedDown /></p>
+                    <div id='accountsandlists' className='header__option'>
+                        <p className='header--text'>Hello, {state.user ? state.user.email : null}</p>
+                        <p className='header--text header--textbig'>{state.user ? 'Sign out' : 'Sign in'}</p>
                     </div>
                 </Link>
 
@@ -48,7 +47,7 @@ const Header = () => {
                     <div className='header__option header__option--cart'>
                         <BiCartAlt style={{ fontSize: '2rem' }} />
                         <p className='header--text header--textbig header_option--cart-text'>Cart</p>
-                        <p className='header--text header--shopping-cart-items header--textbig'>{counter}</p>
+                        <p className='header--text header--shopping-cart-items header--textbig'>{state.items.length}</p>
                     </div>
                 </Link>
 

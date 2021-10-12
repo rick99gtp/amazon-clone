@@ -1,9 +1,10 @@
 import './Login.css';
 import logo from '../assets/amazon-logo-white.jpg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import '../firebase';
+import { useDispatch } from 'react-redux';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -47,6 +48,11 @@ const Login = () => {
             });
 
     };
+
+    useEffect(() => {
+        const auth = getAuth();
+        auth.signOut();
+    }, []);
 
     return (
         <div className='login'>
