@@ -1,12 +1,15 @@
 import './EmptyCart.css';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const EmptyCart = () => {
+    const user = useSelector(state => state.user);
+    
     return (
         <div className='checkout__empty-cart'>
             <img src='https://m.media-amazon.com/images/G/01/cart/empty/kettle-desaturated._CB445243794_.svg' alt='empty cart' />
             <div className='checkout__empty-cart--info'>
-                <h1>Your Amazon Cart is empty</h1>
+                <h1>Hello, {user ? user.email : 'Guest'} Your Amazon Cart is empty</h1>
                 <p href="#">Shop today's deals</p>
                 <div className='checkout__empty-cart--buttons'>
                     <Link to='/signin' style={{ textDecoration: 'none' }}>

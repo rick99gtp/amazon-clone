@@ -1,13 +1,15 @@
 import './Login.css';
 import logo from '../assets/amazon-logo-white.jpg';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import '../firebase';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const history = useHistory();
 
     const signin = e => {
         e.preventDefault();
@@ -16,8 +18,9 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(userCredential => {
                 //signed in
-                const user = userCredential.user;
-                console.log(user);
+                if(auth) {
+                    history.push('/');
+                }
             })
             .catch(error => {
                 const errorCode = error.code;
@@ -32,8 +35,10 @@ const Login = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
-                const user = userCredential.user;
-                // ...
+                if(auth) {
+                    history.push('/');
+                }
+                // const user = userCredential.user;
             })
             .catch((error) => {
                 const errorCode = error.code;

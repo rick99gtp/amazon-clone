@@ -1,14 +1,13 @@
 import './Header.css';
 import { BsSearch } from 'react-icons/bs';
-import { TiLocationOutline } from 'react-icons/ti';
+import { TiLocationOutline, TiArrowSortedDown } from 'react-icons/ti';
 import { BiCartAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Header = () => {
     const counter = useSelector(state => state.items.length);
-
-    // console.log(counter.items.length);
+    const user = useSelector(state => state.user);
 
     return (
         <div className='header'>
@@ -35,8 +34,8 @@ const Header = () => {
             <div className='header__nav'>
                 <Link to='/login'>
                     <div className='header__option'>
-                        <p className='header--text'>Hello, Sign In</p>
-                        <p className='header--text header--textbig'>Account & Lists</p>
+                        <p className='header--text'>Hello, {user ? user.email : null}</p>
+                        <p className='header--text header--textbig'>Account & Lists <TiArrowSortedDown /></p>
                     </div>
                 </Link>
 
