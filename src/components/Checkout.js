@@ -24,7 +24,6 @@ const Checkout = () => {
                 <div className='checkout__header--ad'>
                     <img src="" alt="amazon ad" />
                 </div>
-                <h3>{cart.email}</h3>
                 {cartHasItems ? <CartItems /> : <EmptyCart />}
             </div>
             <div className='checkout__price--div'>
