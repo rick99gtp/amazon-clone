@@ -4,9 +4,17 @@ import { TiLocationOutline } from 'react-icons/ti';
 import { BiCartAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { getAuth } from 'firebase/auth';
 
 const Header = () => {
     const state = useSelector(state => state);
+    // const counter = useSelector(state => state.items.length);
+    // const user = useSelector(state => state.user);
+
+    const handleAuthentication = () => {
+        const auth = getAuth();
+        auth.signOut();
+    };
 
     return (
         <div className='header'>
@@ -31,8 +39,8 @@ const Header = () => {
             </div>
 
             <div className='header__nav'>
-                <Link to='/login'>
-                    <div id='accountsandlists' className='header__option'>
+                <Link to={!state.user && '/login'}>
+                    <div id='accountsandlists' className='header__option' onClick={handleAuthentication}>
                         <p className='header--text'>Hello, {state.user ? state.user.email : null}</p>
                         <p className='header--text header--textbig'>{state.user ? 'Sign out' : 'Sign in'}</p>
                     </div>
