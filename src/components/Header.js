@@ -7,9 +7,8 @@ import { useSelector } from 'react-redux';
 import { getAuth } from 'firebase/auth';
 
 const Header = () => {
-    const state = useSelector(state => state);
-    // const counter = useSelector(state => state.items.length);
-    // const user = useSelector(state => state.user);
+    const counter = useSelector(state => state.items.length);
+    const user = useSelector(state => state.user);
 
     const handleAuthentication = () => {
         const auth = getAuth();
@@ -39,23 +38,23 @@ const Header = () => {
             </div>
 
             <div className='header__nav'>
-                <Link to={!state.user && '/login'}>
+                <Link to={!user && '/login'}>
                     <div id='accountsandlists' className='header__option' onClick={handleAuthentication}>
-                        <p className='header--text'>Hello, {state.user ? state.user.email : null}</p>
-                        <p className='header--text header--textbig'>{state.user ? 'Sign out' : 'Sign in'}</p>
+                        <p className='header--text'>Hello, {user ? user.email : 'Guest'}</p>
+                        <p className='header--text header--textbig'>{user ? 'Sign out' : 'Sign in'}</p>
                     </div>
                 </Link>
 
-                    <div className='header__option'>
-                        <p className='header--text'>Returns</p>
-                        <p className='header--text header--textbig'>& Orders</p>
-                    </div>
+                <div className='header__option'>
+                    <p className='header--text'>Returns</p>
+                    <p className='header--text header--textbig'>& Orders</p>
+                </div>
 
                 <Link to='/checkout'>
                     <div className='header__option header__option--cart'>
                         <BiCartAlt style={{ fontSize: '2rem' }} />
                         <p className='header--text header--textbig header_option--cart-text'>Cart</p>
-                        <p className='header--text header--shopping-cart-items header--textbig'>{state.items.length}</p>
+                        <p className='header--text header--shopping-cart-items header--textbig'>{counter}</p>
                     </div>
                 </Link>
 
