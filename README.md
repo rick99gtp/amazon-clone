@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Amazon Clone
+
+![image](https://user-images.githubusercontent.com/5834000/137398954-b8ceedf2-dbca-4caa-bd8e-2ddf548bce2d.png)
 
 I created this project so that I could get a better understanding of how to use React Router (Link and useHistory), React Redux, Firebase User Authentication, shopping carts, and payment systems. For now, I am putting a hold on learning payment systems so I can continue to familiarize myself with React Router and React Redux in other projects.
 
