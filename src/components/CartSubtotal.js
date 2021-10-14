@@ -1,5 +1,4 @@
 import './CartSubtotal.css';
-import { useSelector } from 'react-redux';
 import CurrencyFormat from 'react-currency-format';
 
 const CartSubtotal = (props) => {

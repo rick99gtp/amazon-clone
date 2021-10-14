@@ -9,7 +9,7 @@ const EmptyCart = () => {
         <div className='checkout__empty-cart'>
             <img src='https://m.media-amazon.com/images/G/01/cart/empty/kettle-desaturated._CB445243794_.svg' alt='empty cart' />
             <div className='checkout__empty-cart--info'>
-                <h1>Hello, {state.user ? state.user.email : 'Guest'}</h1>
+                <h1>Hello, {state.user ? state?.user?.email : 'Guest'}</h1>
                 <h2>Your Amazon Cart is empty</h2>
                 <p href="#">Shop today's deals</p>
                 {state.user ? null :

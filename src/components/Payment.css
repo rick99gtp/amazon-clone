@@ -63,6 +63,7 @@
     border: 1px solid #ddd;
     padding: 15px;
     display: flex;
+    margin: 10px;
 }
 
 .btn-place-your-order {
@@ -81,6 +82,11 @@
     color: #b12704;
     font-weight: bold;
     font-size: 1.25rem;
+    display: flex;
+}
+
+.review-items__order-total span {
+    margin-left: 10px;
 }
 
 .order-details__container {
