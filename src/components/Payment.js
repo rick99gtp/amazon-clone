@@ -6,15 +6,15 @@ const Payment = () => {
     const user = useSelector(state => state.user);
 
     return (
-        <div className='payment-container'>
-            <div className='payment-header'>
-                Checkout ({count} item{count > 1 ? 's' : ''})
-            </div>
+        <div className='payment__container'>
+            <h1 className='payment__header'>
+                Checkout <span className='payment__item-count'>({count} item{count > 1 ? 's' : ''}) </span>
+            </h1>
 
             <div className='payment__detail-container'>
                 <div className='payment__transaction-details'>
                     <div className='payment__shipping-details'>
-                        <p>Shipping address</p>
+                        <p className='payment__title'>Shipping address</p>
                         <div className='payment__shipping-address'>
                             <ul>
                                 <li>{user.email}</li>
@@ -23,23 +23,48 @@ const Payment = () => {
                             </ul>
                         </div>
                         <div className='payment__change-address'>
-                            <a href="#">Change</a>
+                            Change
                         </div>
                     </div>
 
-                    <div className='payment__review-items'>
-
-                    </div>
-
-                    <div className='payment__place-order'>
-                        <button>Place your order</button>
-                        <div className='payment__order-total'>
-                            <p>Order total: $26.68</p>
-                            <p>By placing your order, you agree to Amazon Clone's privacy notice and conditions of use.</p>
+                    <div className='review-items__container'>
+                        <p className='payment__title'>Review items</p>
+                        <div className='payment__place-order'>
+                            <button className='btn-place-your-order'>Place your order</button>
+                            <div className='payment__order-total'>
+                                <p className='review-items__order-total'>Order total: $26.68</p>
+                                <p>By placing your order, you agree to Amazon Clone's privacy notice and conditions of use.</p>
+                            </div>
                         </div>
                     </div>
-                    <div className='order-details'>
-
+                </div>
+                <div className='order-details'>
+                    <button className='btn-place-your-order order-details-btn'>Place your order</button>
+                    <p>By placing your order, you agree to Amazon Clone's privacy notice and conditions of use.</p>
+                    <div className='order-summary'>
+                        <h2>Order Summary</h2>
+                        <div className='cost__list'>
+                            <div className='cost__list-item'>
+                                <p>Items:</p>
+                                <p className='cost__list-item-price'>$26.68</p>
+                            </div>
+                            <div className='cost__list-item'>
+                                <p>Shipping & handling:</p>
+                                <p className='cost__list-item-price pb-10 bb-gray'>$0.00</p>
+                            </div>
+                            <div className='cost__list-item pt-10'>
+                                <p>Total before tax:</p>
+                                <p className='cost__list-item-price'>$26.68</p>
+                            </div>
+                            <div className='cost__list-item bb-gray'>
+                                <p>Estimated tax to be collected:</p>
+                                <p className='cost__list-item-price pb-10'>$0.00</p>
+                            </div>
+                            <p className='review-items__order-total just-space dis-flex px-5'>Order total:<span>$26.68</span></p>
+                        </div>
+                        <div className='order-summary__comment'>
+                            Prime shipping benefits have been applied to your order.
+                        </div>
                     </div>
                 </div>
             </div>

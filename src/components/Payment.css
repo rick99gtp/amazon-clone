@@ -1,3 +1,148 @@
-.payment-container {
+.payment__container {
     
+}
+
+.payment__header {
+    padding: 1rem 0;
+    background: linear-gradient(to bottom, #fff, #f3f3f3);
+    border-bottom: 1px solid #ddd;
+}
+
+.payment__detail-container {
+    padding: 1.7rem 20rem;
+    display: flex;
+}
+
+.payment__container h1 {
+    font-size: 2.15rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.payment__item-count {
+    color: #007185;
+}
+
+.payment__shipping-address ul {
+    list-style: none;
+}
+
+.payment__transaction-details {
+    justify-content: space-between;
+    margin-right: 3rem;
+    flex: 4;
+}
+
+.payment__shipping-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.payment__title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.payment__change-address {
+    cursor: pointer;
+}
+
+.payment__change-address:hover {
+    color: blue;
+}
+
+.review-items__container {
+    padding: 1rem 0;
+}
+
+.payment__place-order {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+}
+
+.btn-place-your-order {
+    border-radius: 10px;
+}
+
+.payment__order-total {
+    margin: 0 1.25rem;
+}
+
+.payment__order-total p:nth-child(2) {
+    font-size: .75rem;
+}
+
+.review-items__order-total {
+    color: #b12704;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.order-details {
+    flex: 1.5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.order-details > p {
+    font-size: .85rem;
+    padding: 10px 5px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.order-details-btn {
+    width: 100%;
+}
+
+.order-summary h2 {
+    padding-top: 10px;
+}
+
+.cost__list {
+    padding: 10px 0;
+}
+
+.cost__list-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: .85rem;
+}
+
+.cost-border {
+    border-bottom: 1px solid #ddd;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.bb-gray {
+    border-bottom: 1px solid #ddd;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.order-summary__comment {
+    background-color: #f0f2f2;
+}
+
+.dis-flex {
+    display: flex;
+}
+
+.just-space {
+    justify-content: space-between;
+}
+
+.px-5 {
+    padding: 5px;
 }
