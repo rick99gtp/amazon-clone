@@ -65,7 +65,7 @@ const Payment = () => {
                             <div className='cost__list'>
                                 <div className='cost__list-item'>
                                     <p>Items:</p>
-                                    <p className='cost__list-item-price'>$26.68</p>
+                                    <p className='cost__list-item-price'><span><CurrencyFormat value={getCartTotal(cart)} renderText={value => <div>{value}</div>} prefix={'$'} displayType={'text'} thousandSeparator={true} /></span></p>
                                 </div>
                                 <div className='cost__list-item'>
                                     <p>Shipping & handling:</p>
@@ -73,7 +73,7 @@ const Payment = () => {
                                 </div>
                                 <div className='cost__list-item pt-10'>
                                     <p>Total before tax:</p>
-                                    <p className='cost__list-item-price'>$26.68</p>
+                                    <p className='cost__list-item-price'><span><CurrencyFormat value={getCartTotal(cart)} renderText={value => <div>{value}</div>} prefix={'$'} displayType={'text'} thousandSeparator={true} /></span></p>
                                 </div>
                                 <div className='cost__list-item bb-gray'>
                                     <p>Estimated tax to be collected:</p>
