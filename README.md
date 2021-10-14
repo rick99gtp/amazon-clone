@@ -24,3 +24,14 @@ Styling the pages wasn't any problem. Most of the tasks required to create this 
 
 ## What I learned
 
+I continue to say this but I don't think it hurts to repeat myself. The more I learn about React, the more I absolutely love it. React Router has some reqlly nice utilities that can make things easier. Redux state management isn't that bad once you get used to how it works. I don't think I would use it for smaller projects, but I would assume that with larger projects it's necessary.
+
+## Takeaways
+
+This was such a great project to learn many different important things at once. My mind is now accelerating to create other projects using React and Firebase. I think this is my third React app, but by far my favorite.
+
+While this was a learning experience, I know that this should be developed for mobile first. At the time of this writing (10/14/2021), it is not styled for mobile. At all. Don't even bother, it's nasty!  ;)  I will be taking care of this shortly.
+
+Thanks for reading.
+
+It is deployed with Firebase here: https://clone-332d9.web.app/
