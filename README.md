@@ -18,5 +18,5 @@ In this project, you can sign up as a new user and sign in/sign out as a current
 * CSS 3
 * Javascript
 
-### Problems Faced
+## Problems Faced
 
