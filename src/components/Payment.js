@@ -38,33 +38,35 @@ const Payment = () => {
                         </div>
                     </div>
                 </div>
-                <div className='order-details'>
-                    <button className='btn-place-your-order order-details-btn'>Place your order</button>
-                    <p>By placing your order, you agree to Amazon Clone's privacy notice and conditions of use.</p>
-                    <div className='order-summary'>
-                        <h2>Order Summary</h2>
-                        <div className='cost__list'>
-                            <div className='cost__list-item'>
-                                <p>Items:</p>
-                                <p className='cost__list-item-price'>$26.68</p>
+                <div className='order-details__container'>
+                    <div className='order-details'>
+                        <button className='btn-place-your-order order-details-btn'>Place your order</button>
+                        <p>By placing your order, you agree to Amazon Clone's privacy notice and conditions of use.</p>
+                        <div className='order-summary'>
+                            <h2>Order Summary</h2>
+                            <div className='cost__list'>
+                                <div className='cost__list-item'>
+                                    <p>Items:</p>
+                                    <p className='cost__list-item-price'>$26.68</p>
+                                </div>
+                                <div className='cost__list-item'>
+                                    <p>Shipping & handling:</p>
+                                    <p className='cost__list-item-price pb-10 bb-gray'>$0.00</p>
+                                </div>
+                                <div className='cost__list-item pt-10'>
+                                    <p>Total before tax:</p>
+                                    <p className='cost__list-item-price'>$26.68</p>
+                                </div>
+                                <div className='cost__list-item bb-gray'>
+                                    <p>Estimated tax to be collected:</p>
+                                    <p className='cost__list-item-price pb-10'>$0.00</p>
+                                </div>
+                                <p className='review-items__order-total just-space dis-flex py-5'>Order total:<span>$26.68</span></p>
                             </div>
-                            <div className='cost__list-item'>
-                                <p>Shipping & handling:</p>
-                                <p className='cost__list-item-price pb-10 bb-gray'>$0.00</p>
-                            </div>
-                            <div className='cost__list-item pt-10'>
-                                <p>Total before tax:</p>
-                                <p className='cost__list-item-price'>$26.68</p>
-                            </div>
-                            <div className='cost__list-item bb-gray'>
-                                <p>Estimated tax to be collected:</p>
-                                <p className='cost__list-item-price pb-10'>$0.00</p>
-                            </div>
-                            <p className='review-items__order-total just-space dis-flex px-5'>Order total:<span>$26.68</span></p>
                         </div>
-                        <div className='order-summary__comment'>
-                            Prime shipping benefits have been applied to your order.
-                        </div>
+                    </div>
+                    <div className='order-summary__comment'>
+                        Prime shipping benefits have been applied to your order.
                     </div>
                 </div>
             </div>
