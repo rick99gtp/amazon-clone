@@ -26,7 +26,7 @@ Styling the pages wasn't any problem. Most of the tasks required to create this 
 
 ## What I learned
 
-I continue to say this but I don't think it hurts to repeat myself. The more I learn about React, the more I absolutely love it. React Router has some reqlly nice utilities that can make things easier. Redux state management isn't that bad once you get used to how it works. I don't think I would use it for smaller projects, but I would assume that with larger projects it's necessary.
+I continue to say this but I don't think it hurts to repeat myself. The more I learn about React, the more I absolutely love it. React Router has some really nice utilities that can make things easier. Redux state management isn't that bad once you get used to how it works. I don't think I would use it for smaller projects, but I would assume that with larger projects it's necessary.
 
 ## Takeaways
 
