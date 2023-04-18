@@ -32,7 +32,7 @@ I continue to say this but I don't think it hurts to repeat myself. The more I l
 
 This was such a great project to learn many different important things at once. My mind is now accelerating to create other projects using React and Firebase. I think this is my third React app, but by far my favorite.
 
-While this was a learning experience, I know that this should be developed for mobile first. At the time of this writing (10/14/2021), it is not styled for mobile. At all. Don't even bother, it's nasty!  ;)  I will be taking care of this shortly.
+While this was a learning experience, I know that this should be developed for mobile first. At the time of this writing (10/14/2021), it is not styled for mobile. At all. Don't even bother, it's nasty!  ;)  I will be taking care of this at some point in the future.
 
 Thanks for reading.
 
