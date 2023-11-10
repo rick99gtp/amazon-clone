@@ -48,6 +48,7 @@ const Login = () => {
 		}
 		if (errorCode === "auth/email-already-in-use") {
 			setEmailMessage("Email already in use.");
+			setPasswordMessage("");
 		}
 		if (errorCode === "auth/wrong-password") {
 			setPasswordMessage("Wrong password entered.");
